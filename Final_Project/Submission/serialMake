@@ -1,0 +1,20 @@
+# Makefile for the Final Project for serial merge sort
+
+.PHONY: clean
+CC = gcc
+CFLAGS = -c
+LFLAGS = 
+OBJS = main.o functions.o
+
+serial: $(OBJS)
+	$(CC) -o $@ $^ $(LFLAGS)
+
+$(OBJS) : %.o: %.c
+	$(CC) $(CFLAGS) $<
+
+main.o: FUNCTIONS.h
+
+functions.o: FUNCTIONS.h 
+
+clean: 
+	rm -rf *.o serial
