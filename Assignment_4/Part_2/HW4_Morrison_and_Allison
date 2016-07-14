@@ -1,0 +1,216 @@
+Tom Morrison and Mary Allison
+February 16, 2016
+ASEN 4519
+1. ls
+2. ls -al
+3. First column gives the type and access right to file. D is the directory or file, the first rwx is the owner of the file, the second rwx is the group owner, the last rwx is the world wide access read write and execute permission.
+4. tom@tom-VirtualBox:~$ df -h
+Filesystem Size Used Avail Use% Mounted on
+/dev/sda1 15G 6.5G 7.5G 47% /
+none 4.0K 0 4.0K 0% /sys/fs/cgroup
+udev 1.1G 4.0K 1.1G 1% /dev
+tmpfs 210M 928K 209M 1% /run
+none 5.0M 0 5.0M 0% /run/lock
+none 1.1G 80K 1.1G 1% /run/shm
+none 100M 40K 100M 1% /run/user
+/dev/sr0 57M 57M 0 100% /media/tom/VBOXADDITIONS_5.0.14_105127
+
+5. NAME
+bzip2, bunzip2 - a block-sorting file compressor, v1.0.6
+bzcat - decompresses files to stdout
+bzip2recover - recovers data from damaged bzip2 files
+
+SYNOPSIS
+bzip2 [ -cdfkqstvzVL123456789 ] [ filenames ... ]
+bzip2 [ -h|--help ]
+bunzip2 [ -fkvsVL ] [ filenames ... ]
+bunzip2 [ -h|--help ]
+bzcat [ -s ] [ filenames ... ]
+bzcat [ -h|--help ]
+bzip2recover filename
+
+DESCRIPTION
+bzip2 compresses files using the Burrows-Wheeler block sorting text
+compression algorithm, and Huffman coding. Compression is generally
+considerably better than that achieved by more conventional
+LZ77/LZ78-based compressors, and approaches the performance of the PPM
+family of statistical compressors.
+
+ECHO(1) User Commands ECHO(1)
+
+NAME
+echo - display a line of text
+
+SYNOPSIS
+echo [SHORT-OPTION]... [STRING]...
+echo LONG-OPTION
+DESCRIPTION
+Echo the STRING(s) to standard output.
+
+-n do not output the trailing newline
+
+-e enable interpretation of backslash escapes
+
+-E disable interpretation of backslash escapes (default)
+
+--help display this help and exit
+
+--version
+output version information and exit
+NAME
+which - locate a command
+
+SYNOPSIS
+which [-a] filename ...
+
+DESCRIPTION
+which returns the pathnames of the files (or links) which would be exe‐
+cuted in the current environment, had its arguments been given as com‐
+mands in a strictly POSIX-conformant shell. It does this by searching
+the PATH for executable files matching the names of the arguments. It
+does not follow symbolic links.
+
+OPTIONS
+-a print all matching pathnames of each argument
+
+EXIT STATUS
+0 if all specified commands are found and executable
+
+1 if one or more specified commands is nonexistent or not exe‐
+cutable q
+NAME
+tar — The GNU version of the tar archiving utility
+
+SYNOPSIS
+tar [-] A --catenate --concatenate | c --create | d --diff --compare |
+--delete | r --append | t --list | --test-label | u --update | x
+--extract --get [options] [pathname ...]
+
+DESCRIPTION
+Tar stores and extracts files from a tape or disk archive.
+
+The first argument to tar should be a function; either one of the letters
+Acdrtux, or one of the long function names. A function letter need not
+be prefixed with ``-'', and may be combined with other single-letter
+options. A long function name must be prefixed with --. Some options
+take a parameter; with the single-letter form these must be given as sep‐
+arate arguments. With the long form, they may be given by appending
+=value to the option.
+
+FUNCTION LETTERS
+Main operation mode:
+NAME
+whiptail - display dialog boxes from shell scripts
+
+SYNOPSIS
+whiptail [ --title title ] [ --backtitle backtitle ] [ --clear ] [
+--default-item string ] [ --defaultno ] [ --fb ] [ --nocancel ] [
+--yes-button text ] [ --no-button text ] [ --ok-button text ] [ --can‐
+cel-button text ] [ --noitem [ ] --output-fd fd ] [ --separate-output ]
+[ --scrolltext ] [ --topleft ] box-options
+
+DESCRIPTION
+whiptail is a program that will let you present a variety of questions
+or display messages using dialog boxes from a shell script. Currently,
+these types of dialog boxes are implemented:
+
+yes/no box, menu box, input box, message box, text box, info box,
+checklist box, radiolist box gauge box, and password box.
+
+OPTIONS
+--clear
+The screen will be cleared to the screen attribute on exit.
+NANO(1) General Commands Manual NANO(1)
+
+NAME
+nano - Nano's ANOther editor, an enhanced free Pico clone
+
+SYNOPSIS
+nano [OPTIONS] [[+LINE,COLUMN] FILE]...
+
+DESCRIPTION
+This manual page briefly documents the nano command.
+
+nano is a small, free and friendly editor which aims to replace Pico,
+the default editor included in the non-free Pine package. Rather than
+just copying Pico's look and feel, nano also implements some missing
+(or disabled by default) features in Pico, such as "search and replace"
+and "go to line and column number".
+
+OPTIONS
++LINE,COLUMN
+Places cursor at line number LINE and column number COLUMN (at
+least one of which must be specified) on startup, instead of the
+default of line 1, column 1.
+
+6. Make a text file
+mkdir ASEN4519
+vi asen4519test.txt
+chmod u+rwx asen4519tes.txt
+
+tom@tom-VirtualBox:~/Desktop/ASEN4519$ ls -al
+total 16
+drwxrwxr-x 2 tom tom 4096 Feb 16 16:08 .
+drwxr-xr-x 3 tom tom 4096 Feb 16 15:55 ..
+-rwx------ 1 tom tom 94 Feb 16 16:08 asen4519test.txt
+-rw-rw-r-- 1 tom tom 15 Feb 16 16:00 test
+
+tom@tom-VirtualBox:~/Desktop/ASEN4519$ cat asen4519test.txt
+Tom Morrison and Mary Allison
+2017
+Dumb and Dumber and How to Train Your Dragon 2
+
+mv asen4519test.txt ~
+mv asen4519test.txt asen4519.txt
+rm asen4519
+
+7. Matlab
+
+tom@tom-VirtualBox:~$ matlab &
+
+MATLAB is using .8 % CPU and 17.8% MEM
+top - 15:37:46 up 30 min, 2 users, load average: 0.07, 0.21, 0.20
+Tasks: 167 total, 1 running, 166 sleeping, 0 stopped, 0 zombie
+%Cpu(s): 13.8 us, 0.8 sy, 0.0 ni, 85.3 id, 0.1 wa, 0.0 hi, 0.0 si, 0.0 st
+KiB Mem: 2146524 total, 1731024 used, 415500 free, 61324 buffers
+KiB Swap: 1046524 total, 0 used, 1046524 free. 867704 cached Mem
+
+PID USER PR NI VIRT RES SHR S %CPU %MEM TIME+ COMMAND
+1590 tom 20 0 1225448 158264 65612 S 9.1 7.4 2:02.76 compiz
+978 root 20 0 313976 82828 24204 S 3.6 3.9 0:45.78 Xorg
+2428 tom 20 0 1934176 382704 144028 S 0.8 17.8 0:26.20 MATLAB
+2262 tom 20 0 583764 30368 23868 S 0.7 1.4 0:03.56 gnome-termi+
+2355 tom 20 0 1252800 146492 95992 S 0.7 6.8 0:09.12 soffice.bin
+1217 tom 20 0 116068 3092 2728 S 0.4 0.1 0:04.88 VBoxClient
+1292 tom 20 0 450372 8460 6808 S 0.2 0.4 0:02.83 ibus-daemon
+29 root 20 0 0 0 0 S 0.1 0.0 0:00.69 kworker/0:1
+1232 tom 20 0 40020 3472 2192 S 0.1 0.2 0:00.75 dbus-daemon
+1323 tom 20 0 580852 33476 21056 S 0.1 1.6 0:02.26 unity-panel+
+1370 tom 20 0 487964 24808 19948 S 0.1 1.2 0:00.73 ibus-ui-gtk3
+1634 tom 20 0 614636 37292 25988 S 0.1 1.7 0:00.50 nm-applet
+1641 tom 20 0 816940 40816 32224 S 0.1 1.9 0:00.89 nautilus
+1 root 20 0 33780 4308 2656 S 0.0 0.2 0:01.27 init
+2 root 20 0 0 0 0 S 0.0 0.0 0:00.00 kthreadd
+3 root 20 0 0 0 0 S 0.0 0.0 0:00.06 ksoftirqd/0
+5 root 0 -20 0 0 0 S 0.0 0.0 0:00.00 kworker/
+
+
+CPU ~77  MEM~79.4
+elapsed time 20.3203777 seconds
+
+With using nice:
+elapsed time was 0.28727. The run time is less because using nice -15 puts matlab at PR (priority) of 35 (how nice was verified because the priority is 15 greater than the priority of the default) instead of the default value of 20. Because it's a higher priority it will run faster. 
+
+8. Where is the executable located?
+Using the which command, the executable is located in /usr/local/bin/matlab
+
+9. In the path. It is stored in the environment variable PATH. It can be easily changed.
+
+10. ls /bin /usr/bin | sort | less >~/Documents/usefulprograms.txt
+
+11. Determine the  default  terminal  for  your  VM  and  where  the  environment  variable
+storing this information is set. It is found in the .bashrc file
+
+12. Verify that there is no default editor currently associated with your VM. Fix this by
+assigning a default editor 
+sudo update-alternatives –-config editor
